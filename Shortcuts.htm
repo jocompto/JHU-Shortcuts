@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ 
+
+<title>Quick Links</title>
+<link rel="shortcut icon" href="C:\\favicon.ico"/>
+<style type="text/css" >
+body {
+      background:#fff;
+      padding:20px;
+      color:#000;
+      font-family:Arial,sans-serif;
+      font-size:13px;
+      line-height:1.3;
+      }
+    h1 {
+		margin:0 0 .25em; 
+		font-size:1.8em;
+	   }
+    h2 {
+		margin:1.5em 0 .25em; 	
+		font-size:1.2em;
+		}
+    code{
+		font:12px Monaco,monospaced; 
+		color:#963;
+		}
+    
+    /* 
+	 * ---------------------------------------- 
+	 * Start custom button CSS here
+     * ---------------------------------------- 
+	 */
+    .btn {
+      display:inline-block;
+      background:none;
+      margin:0;
+      padding:3px 0;
+      border-width:0;
+      overflow:visible;
+      font:100%/1.2 Arial,Sans-serif;
+      text-decoration:none;
+      color:#353;
+      }
+    * html button.btn {
+      padding-bottom:1px;
+      }
+    /* Immediately below is a temporary hack to serve the 
+     *  following margin values only to Gecko browsers
+     *  Gecko browsers add an extra 3px of left/right 
+     *  padding to button elements which can't be overriden.
+     *  Thus, we use -3px of left/right margin to overcome this. 
+	 */
+    html:not([lang*=""]) button.btn {
+      margin:0 -3px;
+      }
+    .btn span {
+      background:#ddd url(img/bg-button.gif) repeat-x 0 0;
+      margin:0;
+      padding:3px 0;
+      border-left:1px solid #bbb;
+      border-right:1px solid #aaa;
+      }
+    * html .btn span {
+      padding-top:0;
+      }
+    .btn span span {
+      position:relative;
+      padding:3px .4em;
+      border-width:0;
+      border-top:1px solid #bbb;
+      border-bottom:1px solid #aaa;
+      }
+    
+    /* pill classes only needed if using pill style buttons ( LEFT | CENTER | RIGHT ) */
+    button.pill-l span {
+      border-right-width:0;
+      }
+    button.pill-l span span {
+      border-right:1px solid #bbb;
+      }
+    button.pill-c span {
+      border-right-style:none;
+      border-left-color:#fff;
+      }
+    button.pill-c span span {
+      border-right:1px solid #bbb;
+      }
+    button.pill-r span {
+      border-left-color:#fff;
+      }
+    
+    /* only needed if implementing separate hover/focus/active state for buttons */
+    .btn:hover span, 
+	.btn:hover span span, 
+	.btn:focus span, 
+	.btn:focus span span {
+      cursor:pointer; /* important for any clickable/pressable element */
+      border-color:#9cf !important;
+      color:#000;
+      }
+	  
+    .btn:active span {
+      background-position:0 -400px;
+      outline:none;
+      }
+	  
+    .btn:focus, .btn:active {
+      outline:none; /* doesn't seem to be respected for button tag, only anchor tags */
+      }
+
+    /* use if one button should be the 'primary' button */
+    .primary {
+      font-weight:bold;
+      color:#000;
+      }
+	  { margin: 0; padding: 0; border: 0px solid cyan; }  /* reset all margins, paddings and borders */
+        html {
+            font-size: 16px;
+            line-height: normal;
+        }
+        body {
+            line-height: 100%;
+            background: white;
+        }
+        .img-wrapper-center {
+            width: 400px;
+            height: 200px;  /* necessary, besides line-height, if images are taller than it */
+            line-height: 200px;  /* must be equal to line-height */
+            text-align: center;
+            background: white;
+        }
+        .img-wrapper-center img {
+            vertical-align: middle;
+			 height: auto;
+        }
+		img.resize{
+			width:540px; /* you can use % */
+			height: auto;
+		}
+	#myDiv 
+	{
+		height:104px;
+		width:140px;
+	}
+	#myDiv img
+	{
+		// max-width:100%; 
+		// max-height:100%;
+		margin:auto;
+		display:block;
+	}
+	#googlestyling {
+    background: white url("www.google.com") left no-repeat;
+    padding-left: 17px;
+	
+    a:not(.default):link    { color: Blue; }
+    a:not(.default):visited { color: blue; }
+}
+   
+</style>
+
+</head>
+
+<script type="text/javascript" language="javascript">
+	
+    function RunBrowser(browser) {
+		WshShell = new ActiveXObject("WScript.Shell");
+		WshShell.Run(browser, 1, false);
+    }	
+	 
+	
+var sapurl="https://sapdv.erp.johnshopkins.edu/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&CurrentWindowId=WID1414590350078&NavMode=1&PrevNavTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077?~transaction=SE38~webgui=1" 	
+var sapurl2 = "https://sapdv.erp.johnshopkins.edu/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&CurrentWindowId=WID1414590350078&NavMode=1&PrevNavTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&?~transaction=/nSE38"
+</script>
+
+<script type="text/vbscript" language="vbscript">
+
+Function runGUI()
+' test 
+On Error Resume Next  ' No Run-time error handling in VBScript 
+
+Dim application 
+Dim connection 
+Dim session  
+Dim WScript 
+  
+ 	MsgBox "Start runGUI. " 
+	
+ 
+ 
+
+		If Not IsObject(application) Then
+' Dies here in IE 9		
+        MsgBox "Issue with the GetObject Call, Exiting" 
+Exit Function 	
+		   Set SapGuiAuto  = GetObject("SAPGUI")
+		   Set application = SapGuiAuto.GetScriptingEngine
+		End If
+	
+ 		If Not IsObject(connection) Then
+		   Set connection = application.Children(0)
+		End If
+ 		
+		If Not IsObject(session) Then
+		   Set session    = connection.Children(0)
+		End If
+ 			
+		If IsObject(WScript) Then
+		   WScript.ConnectObject session,     "on"
+		   WScript.ConnectObject application, "on"
+		End If
+		
+ 
+	
+		session.findById("wnd[0]").resizeWorkingPane 192,28,false
+		session.findById("wnd[0]/tbar[0]/okcd").text = "/nse37"
+		session.findById("wnd[0]").sendVKey 0
+ 		
+End Function
+</script>
+
+ 
+
+	
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" bgcolor="#FFFFFF">
+
+
+<table border="0" width="100%" cellspacing="15" cellpadding="0" bgcolor= "#0099FF"  >
+  <tr>
+  <br>
+    <td width="100%"><font face="Arial Black" size="10" color="#000000">Quick Links</font></td>
+	<img alt="logo" src="file:///C:/JH_logo.png" height="50"    />
+	<br>
+	<INPUT  TYPE="button" NAME="Google" Value="Google"   onClick='window.open("http://www.google.com")'>  
+    <INPUT TYPE="button" NAME="button1" Value="Bandwidth Place - Internet Speed Test" onClick='window.open("http://bandwidthplace.com/speedtest")'>   
+    <INPUT type="button"  name="Traffic" value="Internet Traffic Report" onclick='window.open("http://internettrafficreport.com/")' >  
+ <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+
+  </tr>
+</table>
+<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><font color="#FFFFFF" face="Arial" size="2"><b>Click Below for Access</b></font></td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="25%" bgcolor="#0099FF" valign="top"> 
+	<blockquote>
+        <p>         <font face="Arial" size="5">Main Links</font>
+		</p>
+	</blockquote>	
+    <p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+
+	<a href="http://www.clicktime.com" target="_blank" >ClickTime</a><br>
+	<a href="https://e210.johnshopkins.edu/e210/index.jsp" target="_blank" >E210 Time</a><br>
+	<a href="https://jhkronos.jhu.edu" target="_blank" >Kronos</a><br>
+	    <a href="https://my.jh.edu" target="_blank" >My JHU</a><br> 
+	  <br>
+	
+      
+      <a href="https://jira.sset.jhu.edu/jira/secure/Dashboard.jspa" target="_blank" >JIRA</a><br>
+      <a href="https://sp12nssf.win.ad.jhu.edu/Projects/index.cfm" target="_blank" >Team Tools</a><br>
+      <a href="https://know.it.jhu.edu/display/SAP/Home" target="_blank" >Confluence</a><br><br>
+	  
+	  <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Dev/Shared%20Documents/Forms/AllItems.aspx" target="_blank" >Development SharePoint</a><br>
+	  <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/default.aspx"target="_blank" >EBS Top Level SharePoint</a><br><br>
+      
+      <a href="http://sapdv.johnshopkins.edu" target="_blank" >SAP Development Portal</a><br>
+      <a href="http://sapqa.johnshopkins.edu" target="_blank" >SAP Quality Portal</a><br>
+      <a href="http://sap.johnshopkins.edu" target="_blank" >SAP Production Portal</a><br>
+      <br>
+	  <a href="http://essdv.johnshopkins.edu/" target="_blank" >ESS Development Portal</a><br>
+      <a href="http://essqa.johnshopkins.edu/" target="_blank" >ESS Quality Portal</a><br>
+      <a href="http://ess.johnshopkins.edu/" target="_blank" >ESS Production Portal</a><br>
+
+      <br>
+      <a href="http://d241xpi.hosts.jhmi.edu:50000/dir/start/index.jsp" target="_blank" >PI Development</a><br>
+      <a href="http://q241xpi.hosts.jhmi.edu:50000/dir/start/index.jsp" target="_blank" >PI Quality</a><br>
+      <a href="http://pr41xpi.hosts.jhmi.edu:50000/dir/start/index.jsp" target="_blank" >PI Production</a><br>
+      <br>
+
+	  <a href="http://un51xpu.hosts.jhmi.edu:50000/irj/portal" target="_blank" >Archive Portal</a><br>
+      <a href="http://saptr.johnshopkins.edu/" target="_blank" >Training Portal (old)</a><br>
+	  <a href="http://tr51xpu.hosts.jhmi.edu:50000/irj/portal/classic" target="_blank" >Training Portal (New)</a><br>
+      <a href="http://sapsd.johnshopkins.edu/" target="_blank" >Sandbox Portal</a><br>
+      
+	 </p>
+
+</td>
+
+	<td width="25%" valign="top">
+	<blockquote>
+        <p> 
+        <font face="Arial" size="5">Misc. Systems</font></p>
+	</blockquote>
+      <p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+      <a href="https://service.sap.com " target="_blank" >SAP Market Place</a><br>
+	  <a href="https://service.sap.com/support" target="_blank" >SAP Support Portal</a><br>
+      <br>
+      
+      <a href="https://srvmgr.johnshopkins.edu/sm/index.do" target="_blank" >Service Manager</a><br> 
+      <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Lists/EBS%20Time%20Away/calendar.aspx"  target="_blank" >EBS Time Away</a><br>
+	  <a href="https://connect.johnshopkins.edu/system/login?domain=https%3A%2F%2Fconnect.johnshopkins.edu&next=/&set-lang=en" target="_blank" >Adobe Connect</a><br>
+	 <a href="http://www.sapathopkins.org/" target="_blank" >SAP@Hopkins Wordpress Blog</a><br>
+	  <br>
+      <a href="https://sp12nssf.win.ad.jhu.edu/Projects/ChangeControl/" target="_blank" >Transport Request Menu </a><br>
+      <a href="https://sp12nssf.win.ad.jhu.edu/Projects/ChangeControl/ManualConfig target="_blank" >Manual Configuration</a><br>
+      <br>
+      
+      <a href="http://jhautopweb1/wcc " target="_blank" >AutoSys Primary R11.3 portal</a><br>
+	  <a href="http://jhautopweb2/wcc " target="_blank" >AutoSys Secondary portal</a><br>
+	  <b>Note:</b> Autosys doesn't not work correctly with IE browser<br>
+      <a href="https://know.it.jhu.edu/x/7YERAg" target="_blank" >On-Call Logging</a><br><br>
+      <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/SiteScape%20Archive/Forms/AllItems.aspx" target="_blank" >Sitescape Archive</a><br>
+	  <br>
+	  <a href="https://lists.johnshopkins.edu/sympa/home" target="_blank" >SYMPA List Management </a><br>
+	  <a href="https://lists.johnshopkins.edu/sympa/info/sap-scm-development" target="_blank" >SYMPA List Management SCM-Development</a><br>
+      <br>
+	  
+      
+      <a href="http://d241xpi.hosts.jhmi.edu:50000/seeburger/index.html" target="_blank" >Seeburger DEV monitor</a><br>
+      <a href="http://q241xpi.hosts.jhmi.edu:50000/seeburger/index.html" target="_blank" >Seeburger QA monitor</a><br>
+      <a href="http://pr41xpi.hosts.jhmi.edu:50000/seeburger/index.html" target="_blank" >Seeburger PROD monitor</a><br>
+     
+      <a href="ftp://ftpprxi.erp.johnshopkins.edu" target="_blank" >FTP XI PROD</a><br> 
+	  <a href="ftp://ftpqaxi.erp.johnshopkins.edu" target="_blank" >FTP XI QA</a><br> 
+	  <a href="ftp://ftpDvxi.erp.johnshopkins.edu" target="_blank" >FTP XI DEV</a><br>
+	  <br>
+
+      </p>
+	  </td>
+    <td width="25%" bgcolor="#0099FF" valign="top">
+    <blockquote>
+        <p>
+        <font face="Arial" size="5">Working Documents</font>
+		</p>    
+	</blockquote>
+	<p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+        <a href="https://know.it.jhu.edu/display/SAP/Development+Team+Monthly+Accomplishments" target="_blank" >Accomplishments</a><br>
+		<a href="https://know.it.jhu.edu/display/SAP/Weekly+Status+Reports" target="_blank" >EBS Weekly Status Reports</a><br>
+		 <br><a href="https://know.it.jhu.edu/display/SAP/Development+Team+on-call+schedule" target="_blank" >on call schedule</a><br>
+		
+		<br>
+		<a href="http://jhbi.johnshopkins.edu/" target="_blank" >Business Objects</a><br> 
+		<br>
+		<a href="https://my.panaya.com/site/pages/security/login.jsf " target="_blank" >Panaya</a><br> 
+		<a href="http://jhhpqcpdb1:8080/qcbin/" target="_blank" >HPQC</a><br> <br>
+		
+		<a href="https://know.it.jhu.edu/display/EBS/Testing+Documentation+Quality+Review" target="_blank" > Transports - Wall of Shame</a><br> 
+		
+		<a href="https://know.it.jhu.edu/display/SAPHI/Home" target="_blank" >Hospital Integration - Confluence</a><br>
+        <a href="https://know.it.jhu.edu/x/NQASAw" target="_blank" >Hospital Integration - Blueprint Session Notes</a><br>
+		<a href="https://collaborate.johnshopkins.edu/sites/SAPCHI/SitePages/Home.aspx" target="_blank" >Hospital Integration - Sharepoint Sites</a><br>
+		
+		<br><a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Shared%20Documents/Agile/EBS%20Project%20Dashboard.xlsx" target="_blank" >Project Dashboard</a><br>
+		
+		
+        <br><a href ="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Dev/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2FSAP%2FSupportTeam%2FDev%2FShared%20Documents%2FCore%20Modifications&FolderCTID=0x01200010CEAD7AB1F6364E96760484FB1B244F&View=%7bF9A89318-5A14-4C41-8E88-0A993491FB65%7d" target="_blank" >Core Mods</a><br>
+
+       
+		<br><a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/SupplyChain/Shared%20Documents/SC%20Priorities/" target="_blank" >SC JIRA List</a><br>
+	  
+	    <br><a href="http://sapathopkins.org/sap-maintenance-schedule/" target="_blank" >SAP Planned Maintenance Schedule</a><br>
+      
+	  <br> 
+		 <br><a href="https://know.it.jhu.edu/x/OQv3" target="_blank" >EBS Operations Manual</a><br>
+		 </p>
+		<p style="margin-left: 20"><b><font face="Arial" size="3" color="#00ff00">
+		<br><a href="https://know.it.jhu.edu/display/SAP/Contact+Information+for+Development+team" target="_blank" >Dev Team Contact List </a><br>
+		</p>
+<p style="margin-left: 20"><b><font face="Arial" size="2" color="#000000">
+      </p></b> 
+	  </td>
+   
+ 
+  <td width="25%" valign="top" >
+	<blockquote>
+        <p>
+        <font face="Arial" size="5">Misc. Links, Maps and Directions</font>
+		</p>
+	</blockquote>	
+	
+ 
+<p style="margin-left: 20"><b><font face="Arial" size="2" >
+      
+ 		
+		
+	<p style="margin-left: 20"><b><font face="Arial" size="2" >
+	<a href="https://login.johnshopkins.edu/successfactors " target="_blank" > JH SuccessFactors </a><br>
+	<a href="http://www.hopkinsmedicine.org/jhhr/PoliciesProcedures/index.html" target="_blank" > JHH/JHHSC Policies & Procedures </a><br>
+	<b>
+		<p style="margin-left: 20"><b><font face="Arial" size="2" >
+		<a href="http://ssc.jhmi.edu/supplychain/travel/index.html" target="_blank" >JH Travel Homepage</a><br> </b> </b>
+		</p>
+	<p style="margin-left: 20"><b><font face="Arial" size="2" >
+	<a href="http://ois.johnshopkins.edu/" target="_blank" > Office of International Student, Faculty, and Staff Services</a><br>
+	<br>
+	<a href="http://www.hopkinsmedicine.org/jhhr/PoliciesProcedures/hr300comp.pdf" target="_blank" > JH HR Comp Proceedures </a><br><br>
+	<a href="http://www.insidehopkinsmedicine.org/news/news_detail.cfm?id=7173" target="_blank" > JHHS Org News </a><br>
+	<a href="http://hrnt.jhu.edu/pay/index.cfm?CFID=2772637&CFTOKEN=60299126" target="_blank" > JHU Pay </a><br>
+	<a href="http://www.it.johnshopkins.edu/restricted/telecom/services/" target="_blank" > Johns Hopkins Telcommunications  </a><br>
+	<a href="http://webapps.jhu.edu/jhuniverse/information_about_hopkins/calendars_notices_announcements/holiday_calendar/" target="_blank" > 		Holiday Calendar </a><br>
+	<br>
+	<a href="
+	https://www.healthcaresource.com/johnshopkins/hm/" target="_blank" > 		Hiring Manager (JHHS)</a><br>
+	<a href="
+	https://hrnt.jhu.edu/jhujobs/" target="_blank" > 		JHU Jobs Website</a><br>
+	<br/>
+	<a href="https://ssl.safaribooksonline.com/securelogin" target="_blank" > 		JHU SafariBooks Online Website</a><br>
+</p>
+<a href="http://www.hopkinsmedicine.org/directions/" target="_blank" >JH Medicine maps</a><br>
+		<a href="http://www.hopkinsmedicine.org/the_johns_hopkins_hospital/_docs/jhi_visitors_guide.pdf" target="_blank" >JH Medical Campus map</a><br>
+		<a href="http://webapps.jhu.edu/jhuniverse/information_about_hopkins/campuses/" target="_blank" >JH University maps</a><br>
+		</p> </b> <p> <b>
+		<a href="http://cds.johnshopkins.edu/SERS" target="_blank" >JHH Strike Emergency Response System</a><br>
+        </p> </b>
+		 
+		<b>
+		<p style="margin-left: 20"><b><font face="Arial" size="2" >
+		<a href="http://www.asug.com/" target="_blank" >ASUG.com - no special char in password</a><br>
+		</p>
+		
+		<b>
+		<p style="margin-left: 20"><b><font face="Arial" size="2" >
+		<a href="http://www.qrstuff.com/" target="_blank" >QR Code Generator</a><br>
+		</p>		
+	</td>
+	
+	
+	</tr>
+</table>
+<table border="0" width="100%" bgcolor="#000000" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><font size="1">&nbsp;</font></td>
+	
+  </tr>
+</table>
+<!% 
+*Added &#x00A; to get multiple line button 
+*Doesn't work in Opera or some other minor browsers - OK for big 4 IE8, Firefox, Chrome, & Safari
+-->
+ 
+<br>
+    <INPUT  TYPE="button" NAME="Explorer" Value="Launch &#x00A;Internet Explorer" onClick='RunBrowser("iexplore.exe")'> 
+	<INPUT  TYPE="button" NAME="FireFox"  Value="Launch &#x00A;FireFox"           onClick='RunBrowser("firefox")'>  
+	<INPUT  TYPE="button" NAME="Chrome"   Value="Launch &#x00A;Chrome" 			  onClick='RunBrowser("chrome")'> 
+	<INPUT  TYPE="button" NAME="Safari"   Value="Launch &#x00A;Safari" 			  onClick='RunBrowser("safari")'> 
+	<INPUT  TYPE="button" NAME="Opera"    Value="Launch &#x00A;Opera" 			  onClick='RunBrowser("opera")'> 
+	<INPUT  TYPE="button" NAME="SMEN"    Value="Launch &#x00A;SMENU CCD" 			  onClick='window.open(sapurl)'>
+	<INPUT  TYPE="button" NAME="RunGUI"    Value="Launch &#x00A;Run GUI" 			  onClick='runGUI()'>
+	
+<p style="margin-left: 20;color:red"><b><font face="Arial" size="2" >
+ <b>DEV conference call number: 888.651.5908 </b> 
+ <ul style="margin-left: 80;color:red">
+<li>Participant: 228195</li>
+<li>Host: 284260</li>
+</ul>
+</p>
+</body>
+ 
+</html>
+
+<!--
+* dead links
+* <a href="https://johnshopkins.app.work.com/#home" target="_blank" >Work.com</a><br>
+ -->
