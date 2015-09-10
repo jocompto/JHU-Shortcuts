@@ -165,72 +165,6 @@ body {
 </style>
 
 </head>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" language="javascript">
-	
-    function RunBrowser(browser) {
-		WshShell = new ActiveXObject("WScript.Shell");
-		WshShell.Run(browser, 1, false);
-    }	
-	 
-function testJQ(){
-	try{
-		$("#error").remove();
-		$("#main").append("<p class=success'JQuery has been installed successfully</p>"); 
-	} catch (e) {
-		  console.log(e); 
-		  alert("jQuery not installed on this page"); 
-	}
-}	
-var sapurl="https://sapdv.erp.johnshopkins.edu/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&CurrentWindowId=WID1414590350078&NavMode=1&PrevNavTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077?~transaction=SE38~webgui=1" 	
-var sapurl2 = "https://sapdv.erp.johnshopkins.edu/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&CurrentWindowId=WID1414590350078&NavMode=1&PrevNavTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&?~transaction=/nSE38"
-</script>
-
-<script type="text/vbscript" language="vbscript">
-
-Function runGUI()
-' test 
-On Error Resume Next  ' No Run-time error handling in VBScript 
-
-Dim application 
-Dim connection 
-Dim session  
-Dim WScript 
-  
- 	MsgBox "Start runGUI. " 
-	
- 
-		If Not IsObject(application) Then
-' Dies here in IE 9		
-        MsgBox "Issue with the GetObject Call, Exiting" 
-Exit Function 	
-		   Set SapGuiAuto  = GetObject("SAPGUI")
-		   Set application = SapGuiAuto.GetScriptingEngine
-		End If
-	
- 		If Not IsObject(connection) Then
-		   Set connection = application.Children(0)
-		End If
- 		
-		If Not IsObject(session) Then
-		   Set session    = connection.Children(0)
-		End If
- 			
-		If IsObject(WScript) Then
-		   WScript.ConnectObject session,     "on"
-		   WScript.ConnectObject application, "on"
-		End If
-		
- 
-	
-		session.findById("wnd[0]").resizeWorkingPane 192,28,false
-		session.findById("wnd[0]/tbar[0]/okcd").text = "/nse37"
-		session.findById("wnd[0]").sendVKey 0
- 		
-End Function
-</script>
-
- 
 
 	
 <body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginheight="0" marginwidth="0" bgcolor="#FFFFFF">
@@ -320,7 +254,7 @@ End Function
 	  <a href="http://localhost:9090/webide/index.html" target="_blank" >SAP WebIDE (OnPremise)</a><br> <br>
       <a href="https://service.sap.com/sap/bc/bsp/spn/sscr/intro.htm" target="_blank" >SAP SSCR Portal (Dev/Obj Keys)</a><br> 
 	  <a href="https://support.sap.com/notes" target="_blank" >SAP OSS Notes</a><br>
-	  <a href="https://service.sap.com/support" target="_blank" >SAP Support Portal</a><br>
+	  <a href="https://support.sap.com/home.html" target="_blank" >SAP Support Portal</a><br>
 	  <a href="https://service.sap.com " target="_blank" >SAP Market Place</a><br>
 	  <a href="https://support.sap.com/support-programs-services/programs/enterprise-support/academy/valuemaps.html" target="_blank" >SAP Value Maps Enterprise Support</a><br> 
       <br>
@@ -513,7 +447,73 @@ End Function
 </ul>
 </p>
 </body>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+	
+    function RunBrowser(browser) {
+		WshShell = new ActiveXObject("WScript.Shell");
+		WshShell.Run(browser, 1, false);
+    }	
+	 
+function testJQ(){
+	try{
+		$("#error").remove();
+		$("#main").append("<p class=success'JQuery has been installed successfully</p>"); 
+	} catch (e) {
+		  console.log(e); 
+		  alert("jQuery not installed on this page"); 
+	}
+}	
+var sapurl="https://sapdv.erp.johnshopkins.edu/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&CurrentWindowId=WID1414590350078&NavMode=1&PrevNavTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077?~transaction=SE38~webgui=1" 	
+var sapurl2 = "https://sapdv.erp.johnshopkins.edu/irj/servlet/prt/portal/prteventname/Navigate/prtroot/pcd!3aportal_content!2fevery_user!2fgeneral!2fdefaultDesktop!2fframeworkPages!2fframeworkpage!2fcom.sap.portal.innerpage!2fcom.sap.portal.contentarea?NavigationTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&CurrentWindowId=WID1414590350078&NavMode=1&PrevNavTarget=navurl%3A%2F%2F6da6cdb7e244d07cf412c147c4399077&?~transaction=/nSE38"
+</script>
+
+<script type="text/vbscript" language="vbscript">
+
+Function runGUI()
+' test 
+On Error Resume Next  ' No Run-time error handling in VBScript 
+
+Dim application 
+Dim connection 
+Dim session  
+Dim WScript 
+  
+ 	MsgBox "Start runGUI. " 
+	
  
+		If Not IsObject(application) Then
+' Dies here in IE 9		
+        MsgBox "Issue with the GetObject Call, Exiting" 
+Exit Function 	
+		   Set SapGuiAuto  = GetObject("SAPGUI")
+		   Set application = SapGuiAuto.GetScriptingEngine
+		End If
+	
+ 		If Not IsObject(connection) Then
+		   Set connection = application.Children(0)
+		End If
+ 		
+		If Not IsObject(session) Then
+		   Set session    = connection.Children(0)
+		End If
+ 			
+		If IsObject(WScript) Then
+		   WScript.ConnectObject session,     "on"
+		   WScript.ConnectObject application, "on"
+		End If
+		
+ 
+	
+		session.findById("wnd[0]").resizeWorkingPane 192,28,false
+		session.findById("wnd[0]/tbar[0]/okcd").text = "/nse37"
+		session.findById("wnd[0]").sendVKey 0
+ 		
+End Function
+</script>
+
+ 
+
 </html>
 
 <!--
