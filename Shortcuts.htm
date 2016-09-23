@@ -10,235 +10,189 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 	<script src="compiled/flipclock.js"></script>	
-    <style type="text/css">
-body {
-        background: #fff;
-        padding: 20px;
-        color: #000;
-        font-family: Arial, sans-serif;
-        font-size: 13px;
-        line-height: 1.3;
-}
+<style type="text/css">
+	body {
+			background: #fff;
+			padding: 20px;
+			color: #000;
+			font-family: Arial, sans-serif;
+			font-size: 13px;
+			line-height: 1.3;
+	}
 
-h1 {
-        margin: 0 0 .25em;
-        font-size: 1.8em;
-}
+	h1 {
+			margin: 0 0 .25em;
+			font-size: 1.8em;
+	}
 
-h2 {
-        margin: 1.5em 0 .25em;
-        font-size: 1.2em;
-}
+	h2 {
+			margin: 1.5em 0 .25em;
+			font-size: 1.2em;
+	}
 
-code {
-        font: 12px Monaco, monospaced;
-        color: #963;
-}
+	code {
+			font: 12px Monaco, monospaced;
+			color: #963;
+	}
 
-/* 
-         * ---------------------------------------- 
-         * Start custom button CSS here
-     * ---------------------------------------- 
-         */
-.btn {
-        display: inline-block;
-        background: none;
-        margin: 0;
-        padding: 10px 0;
-        border-width: 0;
-        overflow: visible;
-        font: 100%/1.2 Arial, Sans-serif;
-        text-decoration: none;
-        color: #353;
-}
+	/* 
+	 * ---------------------------------------- 
+	 * Start custom button CSS here
+	 * ---------------------------------------- 
+	 */
+	.btn {
+			display: inline-block;
+			background: none;
+			margin: 0;
+			padding: 10px 0;
+			border-width: 0;
+			overflow: visible;
+			font: 100%/1.2 Arial, Sans-serif;
+			text-decoration: none;
+			color: #353;
+	}
 
-* html button.btn {
-        padding-bottom: 1px;
-}
-/* Immediately below is a temporary hack to serve the 
-     *  following margin values only to Gecko browsers
-     *  Gecko browsers add an extra 3px of left/right 
-     *  padding to button elements which can&#39;t be overriden.
-     *  Thus, we use -3px of left/right margin to overcome this. 
-         */
-html:not ([lang*=&quot;&quot;] ) button.btn {
-        margin: 0 -3px;
-}
+	* html button.btn {
+			padding-bottom: 1px;
+	}
+	/* Immediately below is a temporary hack to serve the 
+	 *  following margin values only to Gecko browsers
+	 *  Gecko browsers add an extra 3px of left/right 
+	 *  padding to button elements which can&#39;t be overriden.
+	 *  Thus, we use -3px of left/right margin to overcome this. 
+	 */
+	html:not ([lang*=&quot;&quot;] ) button.btn {
+			margin: 0 -3px;
+	}
 
-.btn span {
-        background: #ddd url(img/bg-button.gif) repeat-x 0 0;
-        margin: 0;
-        padding: 10px 0;
-        border-left: 1px solid #bbb;
-        border-right: 1px solid #aaa;
-}
+	.btn span {
+			background: #ddd url(img/bg-button.gif) repeat-x 0 0;
+			margin: 0;
+			padding: 10px 0;
+			border-left: 1px solid #bbb;
+			border-right: 1px solid #aaa;
+	}
 
-* html .btn span {
-        padding-top: 0;
-}
+	* html .btn span {
+			padding-top: 0;
+	}
 
-.btn span span {
-        position: relative;
-        padding: 3px .4em;
-        border-width: 0;
-        border-top: 1px solid #bbb;
-        border-bottom: 1px solid #aaa;
-}
+	.btn span span {
+			position: relative;
+			padding: 3px .4em;
+			border-width: 0;
+			border-top: 1px solid #bbb;
+			border-bottom: 1px solid #aaa;
+	}
 
-/* pill classes only needed if using pill style buttons ( LEFT | CENTER | RIGHT ) */
-button.pill-l span {
-        border-right-width: 0;
-}
+	/* pill classes only needed if using pill style buttons ( LEFT | CENTER | RIGHT ) */
+	button.pill-l span {
+			border-right-width: 0;
+	}
 
-button.pill-l span span {
-        border-right: 1px solid #bbb;
-}
+	button.pill-l span span {
+			border-right: 1px solid #bbb;
+	}
 
-button.pill-c span {
-        border-right-style: none;
-        border-left-color: #fff;
-}
+	button.pill-c span {
+			border-right-style: none;
+			border-left-color: #fff;
+	}
 
-button.pill-c span span {
-        border-right: 1px solid #bbb;
-}
+	button.pill-c span span {
+			border-right: 1px solid #bbb;
+	}
 
-button.pill-r span {
-        border-left-color: #fff;
-}
+	button.pill-r span {
+			border-left-color: #fff;
+	}
 
-/* only needed if implementing separate hover/focus/active state for buttons */
-.btn:hover span, .btn:hover span span, .btn:focus span, .btn:focus span span
-        {
-        cursor: pointer; /* important for any clickable/pressable element */
-        border-color: #9cf !important;
-        color: #000;
-}
+	/* only needed if implementing separate hover/focus/active state for buttons */
+	.btn:hover span, .btn:hover span span, .btn:focus span, .btn:focus span span
+			{
+			cursor: pointer; /* important for any clickable/pressable element */
+			border-color: #9cf !important;
+			color: #000;
+	}
 
-.btn:active span {
-        background-position: 0 -400px;
-        outline: none;
-}
+	.btn:active span {
+			background-position: 0 -400px;
+			outline: none;
+	}
 
-.btn:focus, .btn:active {
-        outline: none;
-        /* doesn&#39;t seem to be respected for button tag, only anchor tags */
-}
+	.btn:focus, .btn:active {
+			outline: none;
+			/* doesn&#39;t seem to be respected for button tag, only anchor tags */
+	}
 
-/* use if one button should be the &#39;primary&#39; button */
-.primary {
-        font-weight: bold;
-        color: #000;
-}
+	/* use if one button should be the &#39;primary&#39; button */
+	.primary {
+			font-weight: bold;
+			color: #000;
+	}
 
-{
-margin
+	{
+	margin:0;
+	padding:0;
+	border:0 px solid cyan;
+	} /* reset all margins, paddings and borders */
+	html {
+			font-size: 16px;
+			line-height: normal;
+	}
+
+	body {
+			line-height: 100%;
+			background: white;
+	}
+
+	.img-wrapper-center {
+			width: 400px;
+			height: 200px;
+			/* necessary, besides line-height, if images are taller than it */
+			line-height: 200px; /* must be equal to line-height */
+			text-align: center;
+			background: white;
+	}
+
+	.img-wrapper-center img {
+			vertical-align: middle;
+			height: auto;
+	}
+
+	img.resize {
+			width: 540px; /* you can use % */
+			height: auto;
+	}
+
+	#myDiv {
+			height: 104px;
+			width: 140px;
+	}
+
+	#myDiv img { //
+			max-width: 100%; //
+			max-height: 100%;
+			margin: auto;
+			display: block;
+	}
+
+	#googlestyling {
+			background: white url(&quot;www.google.com&quot;) left no-repeat;
+			padding-left: 17px;
+			a: not(.default):link{ color: Blue;
+	}
+
+	a:not (.default ):visited {
+			color: blue;
+	}
+	}
+	.ImageButton { margin-right: 20px}
+	a.admin:link{ color:#ff0000; padding-left: 17px; }
+	a.admin:visited {color:#ff0000;}
+	a.admin:hover {color:#ffcc00;}
 
 
-
-
-:
-
-
- 
-
-
-0;
-padding
-
-
-
-
-:
-
-
- 
-
-
-0;
-border
-
-
-
-
-:
-
-
- 
-
-
-0
-px
-
-
- 
-
-
-solid
-
-
- 
-
-
-cyan
-
-
-
-
-;
-} /* reset all margins, paddings and borders */
-html {
-        font-size: 16px;
-        line-height: normal;
-}
-
-body {
-        line-height: 100%;
-        background: white;
-}
-
-.img-wrapper-center {
-        width: 400px;
-        height: 200px;
-        /* necessary, besides line-height, if images are taller than it */
-        line-height: 200px; /* must be equal to line-height */
-        text-align: center;
-        background: white;
-}
-
-.img-wrapper-center img {
-        vertical-align: middle;
-        height: auto;
-}
-
-img.resize {
-        width: 540px; /* you can use % */
-        height: auto;
-}
-
-#myDiv {
-        height: 104px;
-        width: 140px;
-}
-
-#myDiv img { //
-        max-width: 100%; //
-        max-height: 100%;
-        margin: auto;
-        display: block;
-}
-
-#googlestyling {
-        background: white url(&quot;www.google.com&quot;) left no-repeat;
-        padding-left: 17px;
-        a: not(.default):link{ color: Blue;
-}
-
-a:not (.default ):visited {
-        color: blue;
-}
-}
-.ImageButton { margin-right: 20px}
 </style>
   
 <!--[if gte mso 9]><xml>
@@ -325,8 +279,7 @@ a:not (.default ):visited {
               <br />
               <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=126" target="_blank">SC JIRA Board</a>
               <br />
-              <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=128" target="_blank">HR/PY Dev � Other
-              Projects</a>
+              <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=128" target="_blank">HR/PY Dev &mdash; Other Projects</a>
               <br />
               <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=129" target="_blank">HANA Issues</a>
               <br />
@@ -425,7 +378,7 @@ a:not (.default ):visited {
           <font face="Arial" size="2" color="#000000">
                         <a href="https://webide-bf0a8ac80.dispatcher.us1.hana.ondemand.com/" target="_blank">SAP WebIDE  </a>
             <br />
-            <a href="https://account.us1.hana.ondemand.com" target="_blank">SAP HANA Cloud Platform - HCP)</a>
+            <a href="https://account.us1.hana.ondemand.com" target="_blank">SAP HANA Cloud Platform &mdash; HCP)</a>
             <br />
             <a href="https://www.experiencesplash.com/splashapp/" target="_blank">Splash/BUILD</a>
             <br />
@@ -481,7 +434,7 @@ a:not (.default ):visited {
                     <br />
           <a href="https://launchpad.support.sap.com/#" target="_blank">SAP New (Fiori) Support Portal</a><br />
 		  <a href="https://accounts.sap.com/saml2/idp/sso?sp=https://www.successfactors.eu/learninghub" target="_blank">SAP Learning Hub</a>
-		  <a href="mailto:e-learning@sap.com?subject=Learning Hub Issue:"> Learning Hub Tech Support </a><br />
+		  <a class="admin" href="mailto:e-learning@sap.com?subject=Learning Hub Issue:"> Learning Hub Tech Support </a><br />
           <br />
           <a href="https://service.sap.com" target="_blank">SAP Market Place</a>
           <br />
@@ -522,7 +475,8 @@ a:not (.default ):visited {
 		<br />
 			<a href="https://d292xhc.hosts.jhmi.edu:8443" target="_blank">SAP Cloud Connector(HCC))</a>
 			<br />
-			<a href="https://cloudintegration.hana.ondemand.com" target="_blank">SAP HANA Cloud Integration(HCI))</a>
+			<a href="https://cloudintegration.hana.ondemand.com" target="_blank">SAP HANA Cloud Integration(HCI)</a>
+			<a href="https://hcids.us1.hana.ondemand.com/DSoD/session/logon/l0701" target="_blank" class="admin" >SAP HCI Admin</a>
 			<br />
       </b>
       <br />
@@ -560,7 +514,7 @@ a:not (.default ):visited {
               <br />
               <br />
               <br />
-              <a href="https://know.it.jhu.edu/display/EBS/Testing+Documentation+Quality+Review" target="_blank">Transports - Wall
+              <a href="https://know.it.jhu.edu/display/EBS/Testing+Documentation+Quality+Review" target="_blank">Transports &mdash; Wall
               of Shame</a>
               <br />
             </font>
@@ -575,12 +529,12 @@ a:not (.default ):visited {
                   <a href="https://know.it.jhu.edu/display/SAP/Contact+Information+for+Development+team" target="_blank">Dev Team
                   Contact List</a>
                   <br />
-				  <a href="https://know.it.jhu.edu/display/SAP/2016++September-October?src=contextnavchildmode" target="_blank">On-Call
-                  Schedule -Month View</a> <br />
-                  <a href="https://know.it.jhu.edu/display/SAP/Development+Team+on-call+schedule" target="_blank">On-Call
+				  <a href="https://know.it.jhu.edu/display/SAP/2016++September-October?src=contextnavchildmode" target="_blank">On&mdash;Call
+                  Schedule &mdash; Month View</a> <br />
+                  <a href="https://know.it.jhu.edu/display/SAP/Development+Team+on-call+schedule" target="_blank">On&mdash;Call
                   Schedule</a>
                   <br />
-                  <a href="https://know.it.jhu.edu/display/EA/On-Call+Call+Log" target="_blank">On-Call Logging</a>
+                  <a href="https://know.it.jhu.edu/display/EA/On-Call+Call+Log" target="_blank">On&mdash;Call Logging</a>
                   <br />            
                 </font>
               </b>
@@ -618,12 +572,12 @@ a:not (.default ):visited {
                       <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Shared%20Documents/Agile/EBS%20Project%20Dashboard.xlsx"
                       target="_blank">Project Dashboard</a>
                       <br />
-                      <a href="https://know.it.jhu.edu/display/SAPHI/Home" target="_blank">Hospital Integration - Confluence</a>
+                      <a href="https://know.it.jhu.edu/display/SAPHI/Home" target="_blank">Hospital Integration &mdash; Confluence</a>
                       <br />
-                      <a href="https://know.it.jhu.edu/x/NQASAw" target="_blank">Hospital Integration - Blueprint Session Notes</a>
+                      <a href="https://know.it.jhu.edu/x/NQASAw" target="_blank">Hospital Integration &mdash; Blueprint Session Notes</a>
                       <br />
                       <a href="https://collaborate.johnshopkins.edu/sites/SAPCHI/SitePages/Home.aspx" target="_blank">Hospital
-                      Integration - Sharepoint Sites</a>
+                      Integration &mdash; Sharepoint Sites</a>
                       <br />
                       <br />
                       <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Dev/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2FSAP%2FSupportTeam%2FDev%2FShared%20Documents%2FCore%20Modifications&amp;FolderCTID=0x01200010CEAD7AB1F6364E96760484FB1B244F&amp;View=%7bF9A89318-5A14-4C41-8E88-0A993491FB65%7d"
@@ -764,7 +718,7 @@ a:not (.default ):visited {
             <font face="Arial" size="2">
               <b>
                 <font face="Arial" size="2">
-                  <a href="http://www.asug.com/" target="_blank">ASUG.com - no special chars in passwords</a>
+                  <a href="http://www.asug.com/" target="_blank">ASUG.com &mdash; no special chars in passwords</a>
                   <br />
                 </font>
               </b>
@@ -782,19 +736,22 @@ a:not (.default ):visited {
                   <a href="http://www.qrstuff.com/" target="_blank">QR Code Generator</a>
                   <br />
                   <br />
+				  <a href="https://experience.sap.com/" target="_blank">SAP User Experience Community </a><br /> 
                   <a href="https://experience.sap.com/playbook/#/?page=playbook&amp;map=playbook" target="_blank">SAP Design
                   Thinking Playbook</a>
-                  <br />
-                  <a href="http://www.sapdesignguild.org/index1.asp." target="_blank">SAP Design Guild</a>
+                  <br /> 
+				  <a href="http://www.sapdesignguild.org/index1.asp." target="_blank">SAP Design Guild Archive</a>
                   <br />
 
           <a href="https://support.sap.com/support-programs-services/programs/enterprise-support/academy/valuemaps.html"
-          target="_blank">SAP Value Maps Enterprise Support</a>
+          target="_blank">SAP Value Maps Enterprise Support</a><br />
+		  <a href="https://jam4.sapjam.com/extranet/jamatsap.com"
+          target="_blank">SAP JAM</a><br />
           <br />
           <a href="https://www.youtube.com/user/saphanaacademy/featured" target="_blank">SAP HANA Academy YouTube Channel</a>
 					  <br />				  
                   <a href="https://service.sap.com/sap/bc/bsp/spn/esa_redirect/index.htm?gotosearch=X&amp;deliverymethod=9260"
-                  target="_blank">SAP Enterprise Support Academy – Learning Studio (Replay Library)</a>
+                  target="_blank">SAP Enterprise Support Academy &mdash; Learning Studio (Replay Library)</a>
                   <br />
                   <br />
                   <a href="http://www.seamless.com/food-delivery/belvedere-towers-cafe-baltimore.21308.r#menu-tab"

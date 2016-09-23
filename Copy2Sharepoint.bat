@@ -6,7 +6,7 @@ echo ignore.txt >> ignore.txt
 @REM  copy  files
  
 xcopy /I /E /Y /C C:\Users\jcompto8\Documents\GitHub\JHU-Shortcuts\*.* s: /EXCLUDE:ignore.txt 
-xcopy /I /E /Y /C C:\Users\jcompto8\Documents\GitHub\JHU-Shortcuts\*.* C:\Users\jcompto8\Dropbox
+xcopy /I /E /Y /C C:\Users\jcompto8\Documents\GitHub\JHU-Shortcuts\*.* C:\Users\jcompto8\Dropbox /EXCLUDE:ignore.txt
  
 @net use /DELETE S:
 @del ignore.txt
