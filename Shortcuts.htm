@@ -202,9 +202,10 @@ googlestyling {
 	
 	.ImageButton { margin-right: 20px}
 	// Note that the hover effect is listed last.  If it is before the visited,  visited overrides the hover style. 
-	a.admin:link{ color:#ff0000; padding-left: 17px; }
-	a.admin:visited {color:#ff0000;}
-	a.admin:hover {color:#ffcc00;}
+	
+	a.admin:link{color:red;  padding-left: 20px;}
+	a.admin:visited{ color:red; }
+	a.admin:hover{color:#ffcc00;}
  
     a.admin2:link{color:green;  padding-left: 30px; }
 	a.admin2:visited {color:green;}
@@ -215,9 +216,55 @@ googlestyling {
 	a.admin3:hover {color:gold;}	 
 	
 	a.admin4:link { color:gold;  padding-left: 30px;  }
-		
 	a.admin4:visited {color:gold; }
 	a.admin4:hover {color:ivory;}
+	
+	/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    // border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 </style>
   
 <!--[if gte mso 9]><xml>
@@ -242,7 +289,9 @@ googlestyling {
   <input type="image" src="images/itrlogo.gif" name="ITR" value="Internet Traffic Report"
   onclick='window.open(&quot;http://internettrafficreport.com/&quot;)' />
   
-  <br class="tlb" /> <br class="dlb" />
+  <br class="tlb" /> 
+  <!-- <br class="dlb" />
+  -->
   
   <table border="0" width="100%" cellspacing="15" cellpadding="0" bgcolor="#0099FF">
     <tr>
@@ -284,17 +333,19 @@ googlestyling {
               <br />
               <a href="https://jhkronos.jhu.edu" target="_blank">Kronos</a>
               <br />
-              <br />
+              <br /> 
               <a href="https://my.jh.edu" target="_blank">My JHU</a>
               <br />
-              
+             
+			  <a href="https://jhuep-sd.slack.com/" target="_blank">Slack</a>
+			 <br />
               <br />
               <a href="https://jira.sset.jhu.edu/jira/secure/Dashboard.jspa" target="_blank">JIRA</a>
               <br />
               <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=84&amp;view=detail" target="_blank">HR JIRA
               Board</a>
               <br />
-              <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=100" target="_blank">FI JIRA Board</a>
+              <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=178" target="_blank">FI JIRA Board</a>
               <br />
               <a href="https://jira.sset.jhu.edu/jira/secure/RapidBoard.jspa?rapidView=164" target="_blank">SC JIRA Board</a>
               <br />
@@ -421,7 +472,7 @@ googlestyling {
         </p>
       </blockquote>
       <b>
-        <font face="Arial" size="2" color="#000000">
+        <font face="Arial" size="2" >
           <a href="https://fiorisd.erp.johnshopkins.edu/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html"
           target="_blank">Fiori Launchpad  </a>
 		  <a href="https://fiorisd.erp.johnshopkins.edu/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html" class="admin"
@@ -439,8 +490,8 @@ googlestyling {
           <br />
           <a href="http://fiori.johnshopkins.edu"
           target="_blank">Fiori Launchpad  </a>
-		  <a href="https://fiori.erp.johnshopkins.edu/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html" class="admin"
-          target="_blank">Launchpad Designer (PRD)</a> 
+		  <a href="https://fiori.erp.johnshopkins.edu/sap/bc/ui5_ui5/sap/arsrvc_upb_admn/main.html" 
+          target="_blank" class="admin">Launchpad Designer (PRD)</a> 
           
 <!--		  
 		  <a href="https://pr91xgw.hosts.jhmi.edu:8443/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html?sap-client=001&sap-language=EN"
@@ -485,18 +536,17 @@ googlestyling {
         <a href="https://itservices.johnshopkins.edu" target="_blank">Service Now</a>
         <br />      
         <br />
-        <a href="http://jhautopweb1/wcc" target="_blank">AutoSys Primary R11.3 portal</a>
+        <a href="http://jhautopweb1/wcc" class="tooltip" target="_blank">AutoSys Primary R11.3 portal <span class="tooltiptext"><b>Note:</b> Autosys Portal doesn&#39;t always work correctly in the IE browser</span></a> 
         <br />
-        <a href="http://jhautopweb2/wcc" target="_blank">AutoSys Secondary portal</a> 
+        <a href="http://jhautopweb2/wcc" class="tooltip" target="_blank">AutoSys Secondary portal <span class="tooltiptext"><b>Note:</b> Autosys Portal doesn&#39;t always work correctly in the IE browser</span></a> 
         <font face="Arial" size="1">
-        <b>Note:</b> Autosys Portal doesn&#39;t always work correctly in the IE browser</font>
+        </font>
         <br />
         <br />
         <a href="https://my.panaya.com/site/pages/security/login.jsf" target="_blank">Panaya</a>
         <br />
-        <a href="http://jhhpqcpdb1:8080/qcbin/" target="_blank">HPQC</a> 
-        <font face="Arial" size="1">
-        <b>Note:</b> Only works in the IE browser</font>
+        <a href="http://jhhpqcpdb1:8080/qcbin/" class="tooltip" target="_blank">HPQC<span class="tooltiptext"><b>Note:</b> Only works in the IE browser</span></a> 
+         
         <br /></font>
 		<a href="https://eas.retarus.com/PicoPortal/" target="_blank">Retarus&#174 Fax service</a>
       <br />
@@ -528,22 +578,22 @@ googlestyling {
 			  <br />              
 			  
               <br />
-			  <a href="https://know.it.jhu.edu/x/NiC5Ag" target="_blank"> SAP System Status Calendar
-              <a href="http://utm.johnshopkins.edu" target="_blank" class="admin4">Uptime</a>
+			  <a href="https://know.it.jhu.edu/x/NiC5Ag" target="_blank"> SAP System Status Calendar 
+              <a href="https://utm.johnshopkins.edu" target="_blank" class="admin4 tooltip">Uptime<span class="tooltiptext">Show Uptime Stats</span></a>
        
             </font>
           </b>
         </p>
         <p style="margin-left: 20">
-          <b>
+           
             <font face="Arial" size="2" color="#000000">
-              <b>
+              
                 <font face="Arial" size="3" color="#000000">
                   <br />
-				  <a href="https://know.it.jhu.edu/display/SAP/2016+November-December?src=contextnavchildmode" target="_blank">Dev On&mdash;Call
+				  <a href="https://know.it.jhu.edu/x/_Yw0Bg" target="_blank"  >Dev On&mdash;Call
                   Schedule</a> <font face="Arial" size="1" color="#000000"> <b> (Month View)</b> </font> <br />
 				  <br />
-				  <a href="https://know.it.jhu.edu/x/Po0qBg" target="_blank">Supply Chain Team On&mdash;Call Schedule </a>
+				  <a href="https://know.it.jhu.edu/x/Po0qBg" target="_blank"  >Supply Chain Team On&mdash;Call Schedule </a>
 				  <font face="Arial" size="1" color="#000000"> <b> (Month View)</b> </font> <br /> 
 				  
 				     </font>
@@ -555,9 +605,9 @@ googlestyling {
                   <a href="https://know.it.jhu.edu/display/SAP/Contact+Information+for+Development+team" target="_blank" class="admin3" >Dev Team Contact List</a>
                            
                 </font>
-              </b>
+               
             </font>
-          </b> 
+           
         </p>
          
         <p style="margin-left: 20">
@@ -566,8 +616,6 @@ googlestyling {
                 <font face="Arial" size="2" color="#00FF00">
 				<a href="https://know.it.jhu.edu/display/EBS/Keeping+Up" target="_blank">Keeping Up</a>
                 <br />
-				<a href="https://jhuep-sd.slack.com/" target="_blank">Slack</a>
-				<br />
                 <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Lists/EBS%20Time%20Away/calendar.aspx"
                   target="_blank">EBS Time Away</a>
                 <br />
@@ -614,6 +662,8 @@ googlestyling {
                       <br />
                       <br />
 					  <a href="http://www.obkb.com/dcljr/charstxt.html" target="_blank">HTML character codes</a>
+					  <br />
+					  <a href="http://www.asciitable.com/" target="_blank">ASCII character codes</a>
                   <br />					  
                     </font>
 					</b>
@@ -626,7 +676,16 @@ googlestyling {
 	  <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Dev/Shared%20Documents/QL2.0/index.html"
               target="_blank">QuickLinks 2.0</a>
      <br />
+	 <a href="https://collaborate.johnshopkins.edu/sites/SAP/SupportTeam/Dev/Shared%20Documents/QL3.0/index.html"
+              target="_blank">QuickLinks 3.0</a>
+     <br />
      <a href="https://jiratest.sset.jhu.edu/jira/secure/Dashboard.jspa" target="_blank">Test JIRA System</a>  
+	 <br />
+     <a href="https://console.developers.google.com/" target="_blank">Google API Manager Console</a>
+	 <br />
+     <a href="https://developers.google.com/products/" target="_blank">Google Developer Products List</a>
+      <br />
+	  <a href="https://developer.yahoo.com/yql/" target="_blank">Yahoo Developer YQL Console</a>
       <br />
       </td>
       <td width="25%" valign="top">
@@ -839,12 +898,12 @@ googlestyling {
         }
 
         function testJQ() {
-                try {
+            try {
                         if (window.jQuery) {
-							alert("JQuery has been installed successfully");
-						}else{
-							alert("jQuery not installed on this page");
-						}
+							             alert("JQuery has been installed successfully");
+						            }else{
+            							alert("jQuery not installed on this page");
+            						}
                         
                 } catch (e) {
                         console.log(e);
@@ -950,13 +1009,13 @@ End Function
 				var currentDate = new Date();
 
 				// Set some date in the future. Months are 0 based 
-				var targetDate  = new Date(2016, 11,24, 23, 59);
-				var targetDate2 = new Date(2017, 8, 8, 23, 59);  // Sept 8th 
+				var targetDate  = new Date(2017, 11,24, 23, 59);
+				var targetDate2 = new Date(2017, 01, 28, 23, 59);  // Feb 28th 
 				var tnow = (currentDate.getTime() / 1000);
 				// Calculate the difference in seconds between the future and current date
-				var diff =   (targetDate.getTime() / 1000) - tnow;
+				var diff =   (targetDate.getTime() / 1000) - (currentDate.getTime() / 1000);
                 // Calculate the difference in seconds between the future and current date
-				var diff2 =   (targetDate2.getTime() / 1000) - tnow;
+				var diff2 =   (targetDate2.getTime() / 1000) - (currentDate.getTime() / 1000);
 				// Instantiate a coutdown FlipClock
 				clock = $('.clock').FlipClock(diff, {
 					clockFace: 'DailyCounter',
